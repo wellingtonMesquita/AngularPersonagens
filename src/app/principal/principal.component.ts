@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from '../../../node_modules/rxjs/operators';
 import { User } from '../_models';
-import { UserService } from '../_services';
+import { UserService, AuthenticationService } from '../_services';
+import { ActivatedRoute, Router } from '../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-principal',
@@ -10,15 +11,18 @@ import { UserService } from '../_services';
 })
 export class PrincipalComponent implements OnInit {
   users: User[] = [];
-
+  url = "assets/img/p.jpg"
+  
   constructor(private userService: UserService) { }
 
   ngOnInit() {
     this.userService.getAll().pipe(first()).subscribe(users => { 
       this.users = users;
-      console.log(users); 
   });
   }
-   
+ 
+ 
+
+
     
 }

@@ -27,6 +27,12 @@ export class AuthenticationService {
 
     }
 
+    cadastrarPersonagem(name:string,classe: string ,raca:string, elemento: string){
+        return this.http.post<any>(`http://localhost:5000/api/cadastrar`, { name, classe,raca,elemento })
+        .pipe(catchError(this.handleError))
+
+    }
+
 
     logout() {
         // remove user from local storage to log user out

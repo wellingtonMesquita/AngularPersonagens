@@ -16,7 +16,8 @@ import { LoginComponent } from './login';
 import {FooterComponent} from './footer/footer.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {CadastroUsuarioComponent} from './cadastro-usuario/cadastro-usuario.component';
-import { PrincipalComponent } from './principal/principal.component';
+import { PrincipalComponent } from './principal/principal.component';;
+import { CadastrarPersonagemComponent } from './cadastrar-personagem/cadastrar-personagem.component'
 
 @NgModule({
     imports: [
@@ -33,8 +34,8 @@ import { PrincipalComponent } from './principal/principal.component';
         FooterComponent,
         NavbarComponent,
         CadastroUsuarioComponent,
-        PrincipalComponent
-    ],
+        PrincipalComponent,
+        CadastrarPersonagemComponent    ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

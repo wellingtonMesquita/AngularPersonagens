@@ -2,7 +2,7 @@
 
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login';
-import { AuthGuard } from './_guards';
+import { AuthGuard } from './guards';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { CadastrarPersonagemComponent } from './cadastrar-personagem/cadastrar-personagem.component';

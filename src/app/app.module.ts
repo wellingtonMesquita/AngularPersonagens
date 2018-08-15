@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent }  from './app.component';
 import { routing }        from './app.routing';
 
-import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { JwtInterceptor, ErrorInterceptor } from './helpers';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login';
 import {FooterComponent} from './footer/footer.component';

@@ -10,4 +10,7 @@ export class UserService {
     getAll() {
         return this.http.get<User[]>(`http://localhost:5000/api/buscar`);
     }
+    getFiltro(filtro1,filtro2) {
+        return this.http.get<User[]>("http://localhost:5000/api/buscar/" + filtro1 + "/"+ filtro2);
+    }
 }

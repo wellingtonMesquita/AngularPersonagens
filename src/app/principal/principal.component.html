@@ -6,11 +6,28 @@ text-shadow:
    1px -1px 0 #000,
    -1px 1px 0 #000,
     1px 1px 0 #000; margin-left: 20px">Personagens</h1>
+
+    <h4 style="margin-left: 40px">Filtro</h4> 
+  
+  <select (change)="trazerPersonagen()" selected="default" [(ngModel)]="iten" class = "col-2" style="margin-left:40px" >
+      <option>classe</option>
+      <option >raca</option>
+      <option >elemento</option>
+      <option >default</option>
+    </select>
+
+    <select [(ngModel)]="iten2"  selected="default" (change)="trazerPersonagenB()" class = "col-2" style="margin-left:40px">
+        <option *ngFor="let c of elementos" [ngValue]="c">{{c}}</option>
+      </select>
 <div class = "row"  >
+
   <ul class="list-group col-2"style="margin-left: 40px;margin-top:20px;margin-bottom:20px;margin-rigth:20px"*ngFor="let user of users">
       <img [src]="url" width="214px" height="148px">
     <li class="list-group-item" >Nome: {{user.name}} <br> Classe: {{user.classe}}  <br> Raça: {{user.raca}}  <br> Elemento: {{user.elemento}}</li>
   </ul>
   </div>
+    
+  
+
   <button type="submit"style="margin-left: 11px" class="btn btn-primary" routerLink="/cadastrarPersonagem" >Criar Personagem</button>
 

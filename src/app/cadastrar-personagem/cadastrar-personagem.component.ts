@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService, AuthenticationService } from '../_services';
+import { UserService, AuthenticationService } from '../services';
 import { ActivatedRoute, Router } from '../../../node_modules/@angular/router';
 import { first } from '../../../node_modules/rxjs/operators';
 

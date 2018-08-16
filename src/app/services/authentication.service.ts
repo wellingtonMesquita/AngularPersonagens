@@ -11,31 +11,31 @@ export class AuthenticationService {
         return this.http.post<any>(`http://localhost:5000/api/auth/signin`, { usernameOrEmail, password })
             .pipe(map(user => {
                 // login successful if there's a jwt token in the response
-                
+
                     localStorage.clear();
                     localStorage.setItem('token', user.accessToken);
-                
-                
+
+
 
                 return user;
             }));
     }
 
-    cadastrar(name:string,username: string ,email:string, password: string){
-        return this.http.post<any>(`http://localhost:5000/api/auth/signup`, { username, password,name,email })
-        .pipe(catchError(this.handleError))
+    cadastrar(name: string, username: string , email: string, password: string) {
+        return this.http.post<any>(`http://localhost:5000/api/auth/signup`, { username, password, name, email })
+        .pipe(catchError(this.handleError));
 
     }
 
-    cadastrarPersonagem(name:string,classe: string ,raca:string, elemento: string){
-        return this.http.post<any>(`http://localhost:5000/api/cadastrar`, { name, classe,raca,elemento })
-        .pipe(catchError(this.handleError))
+    cadastrarPersonagem(name: string, classe: string , raca: string, elemento: string) {
+        return this.http.post<any>(`http://localhost:5000/api/cadastrar`, { name, classe, raca, elemento })
+        .pipe(catchError(this.handleError));
 
     }
 
 
     logout() {
-        // remove user from local storage to log user out
+       
         localStorage.removeItem('token');
     }
 }

@@ -47,6 +47,11 @@ trazerPersonagenB(){
 });
 }
 
+trazerPersonagenC(personagen:String){
+  
+localStorage.setItem("personagen",personagen.toString());
+
+}
 
     
 }

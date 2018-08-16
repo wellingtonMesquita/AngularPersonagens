@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import { AuthenticationService } from '../_services';
+import { AuthenticationService } from '../services';
 
 
 
@@ -15,31 +15,31 @@ import { AuthenticationService } from '../_services';
 export class CadastroUsuarioComponent implements OnInit {
 
   cadastro = {
-    name:"",
-    username:"",
-    email:"",
-    password:"",
+    name: '',
+    username: '',
+    email: '',
+    password: '',
   };
   returnUrl: string;
   error = '';
-   
-  
 
-  
-  
+
+
+
+
     constructor(private route: ActivatedRoute,
       private router: Router,
-      private authenticationService: AuthenticationService){
+      private authenticationService: AuthenticationService) {
      }
-  
+
     ngOnInit() {
       this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/login';
-  
+
   }
 
-  cadastrar(){
+  cadastrar() {
 
-  this.authenticationService.cadastrar(this.cadastro.name,this.cadastro.username,this.cadastro.email,this.cadastro.password)
+  this.authenticationService.cadastrar(this.cadastro.name, this.cadastro.username, this.cadastro.email, this.cadastro.password)
             .pipe(first())
             .subscribe(
                 data => {
@@ -52,4 +52,3 @@ export class CadastroUsuarioComponent implements OnInit {
     }
   }
 
-  

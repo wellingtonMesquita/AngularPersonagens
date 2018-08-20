@@ -7,6 +7,8 @@ import { User } from '../models';
 export class UserService {
     constructor(private http: HttpClient) { }
 
+    //Aqui vai ficar as requisiçoes 
+
     getAll() {
         return this.http.get<User[]>(`http://localhost:5000/api/buscar`);
     }

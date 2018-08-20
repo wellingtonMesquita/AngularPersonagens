@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+
+// Interceptador algo muito interessante, ele intercepta uma requisiçao,e modifica ele.
+//Nesse caso, ele ta colocando o token no header de todas as requisiçoes tanto get quanto post
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {

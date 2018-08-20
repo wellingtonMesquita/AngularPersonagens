@@ -1,7 +1,13 @@
 <a class = "row" style="cursor:pointer;" >
   
-  <ul class="list-group col-2" (click) = "trazerPersonagenC(user.name)"   style="margin-left: 40px;margin-top:20px;margin-bottom:20px;margin-rigth:20px"*ngFor="let user of users" >
+  <ul class="list-group col-2" style="margin-left: 40px;margin-top:20px;margin-bottom:20px;margin-rigth:20px"*ngFor="let user of users" >
       <img [src]="url" width="214px" height="148px">
     <li class="list-group-item" >Nome: {{user.name}} <br> Classe: {{user.classe}}  <br> Raça: {{user.raca}}  <br> Elemento: {{user.elemento}}</li>
+    
   </ul>
+
+  <ul class="list-group col-2" style="margin-left: 40px;margin-top:20px;margin-bottom:20px;margin-rigth:20px"*ngFor="let user of users" >
+  <li class="list-group-item" >Nome: {{user.name}} <br> Classe: {{user.classe}}  <br> Raça: {{user.raca}}  <br> Elemento: {{user.elemento}} <br>For: 9999 <br> Int: 9999  <br> Des: 9999  <br> Vida: 9999</li>
+  
+</ul>
 </a>

@@ -1,3 +1,9 @@
-<p>
-  aprender works!
-</p>
+<h1>
+  <ul *ngIf="isVariavel">
+    <li  *ngFor=" let arr of umArray ">
+        <span [ngStyle]="{'font-style': styleExp}" (click) = "alerta(arr)" >{{arr}}</span>
+    </li>
+  </ul>
+    <button type="button" class=" btn bg-primary" (click)="mudar()">{{isVariavel}}</button>
+    <button type="button" class=" btn bg-primary" (click)="verEvento($event)">{{isVariavel}}</button>
+</h1>

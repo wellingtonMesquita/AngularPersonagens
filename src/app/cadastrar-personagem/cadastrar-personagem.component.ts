@@ -11,27 +11,27 @@ import { first } from '../../../node_modules/rxjs/operators';
 export class CadastrarPersonagemComponent implements OnInit {
 
   personagem = {
-    name:"",
-    classe:"",
-    raca:"",
-    elemento:""
+    name: '',
+    classe: '',
+    raca: '',
+    elemento: ''
 
   };
   returnUrl: string;
   error = '';
-  constructor(private userService: UserService,private route: ActivatedRoute,
+  constructor(private userService: UserService, private route: ActivatedRoute,
     private router: Router,
     private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/principal';
   }
- 
- 
 
-cadastrarPersonagem(){
 
-this.authenticationService.cadastrarPersonagem(this.personagem.name,this.personagem.classe,this.personagem.raca,this.personagem.elemento)
+
+cadastrarPersonagem() {
+
+this.authenticationService.cadastrarPersonagem(this.personagem.name, this.personagem.classe, this.personagem.raca, this.personagem.elemento)
           .pipe(first())
           .subscribe(
               data => {
@@ -40,8 +40,8 @@ this.authenticationService.cadastrarPersonagem(this.personagem.name,this.persona
               error => {
                   this.error = error;
               });
-              
+
   }
-   
-    
+
+
 }

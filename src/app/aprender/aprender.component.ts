@@ -9,29 +9,26 @@ export class AprenderComponent implements OnInit {
 
 
 
-  isVariavel:boolean;
-  umArray = ["Arroz","Feijao","Carne","Salada"];
+  isVariavel: boolean;
+
+  umArray = ['Arroz', 'Feijao', 'Carne', 'Salada'];
   constructor() { }
 
   ngOnInit() {
     this.isVariavel = false;
 
   }
- 
- mudar(){
-    if(this.isVariavel){
-        this.isVariavel = false;
-    }else{
-        this.isVariavel = true;
-    }
+
+  mudar() {
+    this.isVariavel = !this.isVariavel;
  }
 
- alerta(item){
-    alert(item);
+ alerta(item): void {
+    return alert(item);
  }
 
 
- verEvento(event){
-    console.log(event.MouseEvent.type);
+  verEvento(event): void {
+    console.log('HelloWord');
  }
 }

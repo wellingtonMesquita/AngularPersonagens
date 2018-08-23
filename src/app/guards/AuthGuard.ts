@@ -7,7 +7,7 @@ import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from
 @Injectable({ providedIn: 'root' })
 export class AuthGuard  {
     constructor(private router: Router) { }
-    //Retorna true ou false caso o token exista. 
+    //Retorna true ou false caso o token exista.
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
         if (localStorage.getItem('token')) {
             // logged in so return true

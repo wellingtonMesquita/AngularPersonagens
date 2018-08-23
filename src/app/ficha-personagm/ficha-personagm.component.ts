@@ -10,13 +10,13 @@ import { first } from '../../../node_modules/rxjs/operators';
 export class FichaPersonagmComponent implements OnInit {
   users: {};
   iten: any ;
-  url = "assets/img/p.jpg";
+  url = 'assets/img/p.jpg';
 
-  constructor(private userService:UserService) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this.iten = localStorage.getItem("personagen");
-    this.userService.getFiltro2(this.iten).pipe(first()).subscribe(users => { 
+    this.iten = localStorage.getItem('personagen');
+    this.userService.getFiltro2(this.iten).pipe(first()).subscribe(users => {
       this.users = users;
   });
   }

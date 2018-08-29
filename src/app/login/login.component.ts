@@ -1,28 +1,26 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { first } from 'rxjs/operators';
-
 import { AuthenticationService } from '../services';
 
 @Component({templateUrl: 'login.component.html'})
 export class LoginComponent implements OnInit {
     login = {
-        username:"",
-        password:""
-    }
+        username: '',
+        password: ''
+    };
     loading = false;
     submitted = false;
     returnUrl: string;
     error = '';
 
     constructor(
- 
         private route: ActivatedRoute,
         private router: Router,
         private authenticationService: AuthenticationService) {}
 
     ngOnInit() {
-        
+
         // reset login status
         this.authenticationService.logout();
 
@@ -31,13 +29,13 @@ export class LoginComponent implements OnInit {
     }
 
     // convenience getter for easy access to form fields
-    
+
 
     onSubmit() {
         this.submitted = true;
 
         // stop here if form is invalid
-       
+
 
         this.loading = true;
         this.authenticationService.login(this.login.username, this.login.password)

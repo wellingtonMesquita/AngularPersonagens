@@ -19,6 +19,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { CadastrarPersonagemComponent } from './cadastrar-personagem/cadastrar-personagem.component';
 import { AprenderComponent } from './aprender/aprender.component';
 import { FichaPersonagmComponent } from './ficha-personagm/ficha-personagm.component';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -37,7 +38,8 @@ import { FichaPersonagmComponent } from './ficha-personagm/ficha-personagm.compo
         PrincipalComponent,
         CadastrarPersonagemComponent ,
         AprenderComponent,
-        FichaPersonagmComponent   ],
+        FichaPersonagmComponent
+  ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

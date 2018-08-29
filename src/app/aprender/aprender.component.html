@@ -1,9 +1,45 @@
-<h1>
-  <ul *ngIf="isVariavel">
-    <li  *ngFor=" let arr of umArray ">
-        <span [ngStyle]="{'font-style': styleExp}" (click) = "alerta(arr)" >{{arr}}</span>
-    </li>
-  </ul>
-    <button type="button" class=" btn bg-primary" (click)="mudar()">{{isVariavel}}</button>
-    <button type="button" class=" btn bg-primary" (click)="verEvento($event)">{{isVariavel}}</button>
-</h1>
+<br>
+<br>
+<div class = "row">
+  
+    <form class = "col-4" style="margin: auto; width: 50%;border-left: 0px;border: solid;border-color:rgba(224, 216, 216, 0.993)">
+        <h3>Cadastro Personagem</h3>
+      <br>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input [(ngModel)]="personagem.name" name="CName" type="text" class="form-control" id="exampleInputName" placeholder="Enter name">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Classe</label>
+        <input [(ngModel)]="personagem.classe" name="CName" type="text" class="form-control" id="exampleInputName" placeholder="Classe">
+      </div>
+      <div class="form-group">
+          <label for="exampleInputEmail1">Raça</label>
+          <input [(ngModel)]="personagem.raca" name="CRaça" type="text" class="form-control" id="raca" aria-describedby="emailHelp" placeholder="Raça">
+          
+        </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Elemento</label>
+        <input  [(ngModel)]="personagem.elemento" name="CElemento" type="text" class="form-control" id="Elemento" placeholder="Elemento">
+      </div>
+      <button (click) = "adc()"type="submit" class="btn btn-primary">Submit</button>
+      
+      <br>
+      <br>
+    </form>
+
+    <br>
+  <div>
+        <label>Name</label>
+        <input [(ngModel)]="name"  type="text"  id="Name" placeholder="Enter name">
+
+        <br>
+        
+        <label >Classe</label>
+        <input [(ngModel)]="classe" type="text"  id="Name2" placeholder="Classe">
+        <br>
+          <label >Raça</label>
+          <input [(ngModel)]="raca"  type="text"  id="raca"  placeholder="Raça">
+          <button (click) = "transform()"type="button" class="btn btn-primary">Submit</button>
+
+  </div>

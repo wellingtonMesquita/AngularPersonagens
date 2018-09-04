@@ -7,6 +7,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { CadastrarPersonagemComponent } from './cadastrar-personagem/cadastrar-personagem.component';
 import { AprenderComponent } from './aprender/aprender.component';
 import { FichaPersonagmComponent } from './ficha-personagm/ficha-personagm.component';
+import { ArquivoComponent } from './arquivo/arquivo.component';
 //Defini as rotas do Sistema. 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -17,7 +18,7 @@ const appRoutes: Routes = [
     { path: 'cadastrarPersonagem', component: CadastrarPersonagemComponent, canActivate: [AuthGuard] },
     { path: 'aprender', component: AprenderComponent},
     { path: 'fichapersonagem', component: FichaPersonagmComponent, canActivate: [AuthGuard]},
-
+    { path: 'arquivo', component: ArquivoComponent},
 
     //pagina principal ou pagina root
     { path: '**', redirectTo: '' }

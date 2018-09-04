@@ -18,8 +18,10 @@ import { CadastroUsuarioComponent} from './cadastro-usuario/cadastro-usuario.com
 import { PrincipalComponent } from './principal/principal.component';
 import { CadastrarPersonagemComponent } from './cadastrar-personagem/cadastrar-personagem.component';
 import { AprenderComponent } from './aprender/aprender.component';
-import { FichaPersonagmComponent } from './ficha-personagm/ficha-personagm.component';
-
+import { FichaPersonagmComponent } from './ficha-personagm/ficha-personagm.component';;
+import { PaginacaoComponent } from './paginacao/paginacao.component'
+;
+import { ArquivoComponent } from './arquivo/arquivo.component'
 @NgModule({
     imports: [
         BrowserModule,
@@ -39,7 +41,9 @@ import { FichaPersonagmComponent } from './ficha-personagm/ficha-personagm.compo
         CadastrarPersonagemComponent ,
         AprenderComponent,
         FichaPersonagmComponent
-  ],
+,
+        PaginacaoComponent ,
+        ArquivoComponent ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
